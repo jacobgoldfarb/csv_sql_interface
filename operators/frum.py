@@ -13,4 +13,8 @@ class From(Node):
         self.reader = csv.reader(self.file, delimiter=':', quoting=csv.QUOTE_NONE)
 
     def __next__(self) -> str:
-        return next(self.reader)
+        try:
+            return next(self.reader)
+        except StopIteration:
+            self.file.close()
+            raise
