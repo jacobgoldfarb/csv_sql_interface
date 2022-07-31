@@ -1,4 +1,4 @@
-# SQL Like Interface for CSV Files
+# SQL-like Interface for CSV Files
 ## Examples
 - `select id, city from addresses`
 - `select * from users where first_name = Adam`
